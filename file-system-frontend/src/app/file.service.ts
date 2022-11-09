@@ -24,5 +24,5 @@ export class FileService {
       responseType: 'blob'
     });
   }
-
+  
 }
