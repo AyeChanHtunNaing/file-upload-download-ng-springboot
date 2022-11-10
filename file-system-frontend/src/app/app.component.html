@@ -3,12 +3,12 @@
     <div class="panel-heading">
       <h4>Upload and Download Files</h4>
     </div><br>
-    <div class="panel-body">        
+    <div class="panel-body">
       <strong>Select files from your computer</strong>
       <div *ngIf="fileStatus.status==='progress'">
         <div class="progress">
           <div [style.width.%]="fileStatus.percent" class="progress-bar progress-bar-animated bg-info" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
-              {{ fileStatus.requestType }} {{ fileStatus.percent }} 
+              {{ fileStatus.requestType }} {{ fileStatus.percent }}
             </div>
         </div>
       </div> <hr>
@@ -22,14 +22,14 @@
           </div>
         </fieldset>
       </form>
-      
-      <br>  
-      
-      <div *ngIf="filenames?.length > 0" class="js-upload-finished">
+
+      <br>
+
+      <div *ngIf="filenames.length > 0" class="js-upload-finished">
         <h3>Processed files</h3>
         <div *ngFor="let filename of filenames" class="list-group">
           <a (click)="onDownloadFile(filename)" class="list-group-item list-group-item-success" style="cursor: pointer;">
-            {{ filename }}            
+            {{ filename }}
             <a class="alert-success float-right">Download</a>
           </a><br>
         </div>
